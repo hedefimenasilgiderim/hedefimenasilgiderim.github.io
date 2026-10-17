@@ -1,1 +1,0 @@
-import{r as e}from"./index-Be-MTA5I.js";var t=class extends e{async getPluginVersion(){return{version:`web`}}};export{t as CapacitorShareTargetWeb};
