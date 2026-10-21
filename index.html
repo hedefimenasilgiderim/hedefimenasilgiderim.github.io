@@ -40,22 +40,6 @@
 @media (max-width: 560px) { .testimonials { grid-template-columns: 1fr; } }
 
 /* =========================================================
-   FAQ Search & Filter
-   ========================================================= */
-.faq-search-wrap { position: relative; max-width: 520px; margin: 18px auto 0; }
-.faq-search {
-  width: 100%; background: rgba(18,24,43,0.5); border: 1px solid var(--line);
-  border-radius: 14px; color: var(--text); font: inherit; font-size: 0.98rem;
-  padding: 12px 16px 12px 42px; backdrop-filter: blur(var(--blur));
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-.faq-search::placeholder { color: var(--muted); }
-.faq-search:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 20px rgba(0,242,254,0.18); }
-.faq-search-icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--muted); font-size: 1.1rem; pointer-events: none; }
-.faq-item.filtered { display: none !important; }
-.faq-no-results { text-align: center; color: var(--muted); padding: 26px; font-size: 0.98rem; display: none; }
-
-/* =========================================================
    Desktop Experience Carousel (Tabbed)
    ========================================================= */
 .desktop-carousel { margin-top: 34px; }
@@ -177,11 +161,7 @@
       </div>
     </div>
   </div>
-</section><!-- ============ SSS ============ --> <section>   <div class="wrap center">     <div class="section-head">       <h2>Sıkça Sorulan Sorular</h2>       <p>Uygulama hakkında merak ettiğiniz her şeyin kısa ve net yanıtı.</p>     </div><div class="faq-search-wrap">
-  <span class="faq-search-icon">🔍</span>
-  <input type="text" class="faq-search" id="faqSearch" placeholder="Merak ettiğiniz konuyu arayın (Örn: Ücretsiz mi, Güvenlik, Ulaşım)..." autocomplete="off">
-</div>
-<div class="faq-no-results" id="faqNoResults">Aradığınız konuyla ilgili soru bulunamadı. İletişim sayfamızdan bize yazabilirsiniz.</div>     <div class="faq">       <div class="faq-item">         <button class="faq-q" aria-expanded="false" aria-controls="faq-1">           Hedefime Nasıl Giderim nasıl çalışır? <span class="q-mark">+</span>         </button>         <div class="faq-a" id="faq-1">           <p>Uygulama, şehrinizdeki otobüs, metro, tramvay, vapur, tren ve uçak sefer verilerini tek bir arayüzde birleştirir. Nereden nereye gitmek istediğinizi girin; rota motoru aktarmalı kombinasyonları, süreyi ve maliyeti hesaplayarak en uygun seçeneği sunar.</p>         </div>       </div>       <div class="faq-item">         <button class="faq-q" aria-expanded="false" aria-controls="faq-2">           Hangi ulaşım türlerini (otobüs, metro, vapur, tren, uçak) kapsıyor? <span class="q-mark">+</span>         </button>         <div class="faq-a" id="faq-2">           <p>Şehir içi (otobüs, metro, tramvay, marmaray, feribot/vapur) ve şehirler arası (otobüs, tren, uçak) tüm ulaşım türlerini destekler. Aktarmalı rotalar (ör. otobüs + vapur) da hesaplanabilir.</p>         </div>       </div>       <div class="faq-item">         <button class="faq-q" aria-expanded="false" aria-controls="faq-3">           Özel araç ve otobüs maliyet hesaplaması neye göre yapılır? <span class="q-mark">+</span>         </button>         <div class="faq-a" id="faq-3">           <p>Özel araç için aracınızın yakıt tüketimi (litre/100 km), mesafe ve güncel yakıt fiyatı baz alınarak tahmini maliyet hesaplanır. Toplu taşıma için ise durak sefer ücretleri kullanılır. Tüm sonuçlar tahmindir ve gerçek tarifeye göre değişebilir.</p>         </div>       </div>       <div class="faq-item">         <button class="faq-q" aria-expanded="false" aria-controls="faq-4">           Masaüstü uygulaması güvenli mi? <span class="q-mark">+</span>         </button>         <div class="faq-a" id="faq-4">           <p>Evet. Masaüstü sürümü (Windows) bağımsız bir yürütülebilir dosya olarak dağıtılır. Kullanıcı konumu, favori rotalar ve sohbet geçmişi varsayılan olarak yalnızca cihazınızda saklanır; hesapla giriş yaptıysanız eşleştirme şifreli olarak sunucuda tutulur.</p>         </div>       </div>       <div class="faq-item">         <button class="faq-q" aria-expanded="false" aria-controls="faq-5">           Google Play'de mi var? <span class="q-mark">+</span>         </button>         <div class="faq-a" id="faq-5">           <p>Android sürümü hazırlanma aşamasındadır ve çok yakında Google Play Store'da yayımlanacak olacaktır. O süre için masaüstü uygulamasını indirerek kullanmaya başlayabilirsiniz.</p>         </div>       </div>       <div class="faq-item">         <button class="faq-q" aria-expanded="false" aria-controls="faq-6">           Üyelik gerekli mi? Hangi özellikler ücretsiz? <span class="q-mark">+</span>         </button>         <div class="faq-a" id="faq-6">           <p>Hayır, üyelik zorunlu değildir. Temel rota planlama, yakın duraklar ve sefer bilgileri ücretsizdir. AI asistanı, sefer hatırlatıcısı ve XP Mağazası gibi gelişmiş özellikler giriş yaparak kullanılabilir.</p>         </div>       </div>       <div class="faq-item">         <button class="faq-q" aria-expanded="false" aria-controls="faq-7">           Verilerim üçüncü kişilerle paylaşılır mı? <span class="q-mark">+</span>         </button>         <div class="faq-a" id="faq-7">           <p>Hayır, verileriniz satılmaz. Yalnızca kimlik doğrulama için Google ve reklam için AdMob ile sınırlı paylaşım gerçekleştirilir. Ayrıntılı bilgi için Gizlilik Politikası sayfamızı ziyaret edebilirsiniz.</p>         </div>       </div>       <div class="faq-item">         <button class="faq-q" aria-expanded="false" aria-controls="faq-8">           Hatalı bir sefer saati bildirmek için ne yapmalıyım? <span class="q-mark">+</span>         </button>         <div class="faq-a" id="faq-8">           <p>Uygulama içi geri bildirim formu ya da İletişim sayfası üzerinden bize ulaşabilirsiniz. Bildirdiğiniz hatalar incelenerek veri kaynakları güncellenir.</p>         </div>       </div>     </div>   </div> </section>  <!-- ============ SEHIR REHBERI ============ --> <!-- ============ TESTIMONIALS ============ -->
+</section><!-- ============ SSS ============ --> <section>   <div class="wrap center">     <div class="section-head">       <h2>Sıkça Sorulan Sorular</h2>       <p>Uygulama hakkında merak ettiğiniz her şeyin kısa ve net yanıtı.</p>     </div>     <div class="faq">       <div class="faq-item">         <button class="faq-q" aria-expanded="false" aria-controls="faq-1">           Hedefime Nasıl Giderim nasıl çalışır? <span class="q-mark">+</span>         </button>         <div class="faq-a" id="faq-1">           <p>Uygulama, şehrinizdeki otobüs, metro, tramvay, vapur, tren ve uçak sefer verilerini tek bir arayüzde birleştirir. Nereden nereye gitmek istediğinizi girin; rota motoru aktarmalı kombinasyonları, süreyi ve maliyeti hesaplayarak en uygun seçeneği sunar.</p>         </div>       </div>       <div class="faq-item">         <button class="faq-q" aria-expanded="false" aria-controls="faq-2">           Hangi ulaşım türlerini (otobüs, metro, vapur, tren, uçak) kapsıyor? <span class="q-mark">+</span>         </button>         <div class="faq-a" id="faq-2">           <p>Şehir içi (otobüs, metro, tramvay, marmaray, feribot/vapur) ve şehirler arası (otobüs, tren, uçak) tüm ulaşım türlerini destekler. Aktarmalı rotalar (ör. otobüs + vapur) da hesaplanabilir.</p>         </div>       </div>       <div class="faq-item">         <button class="faq-q" aria-expanded="false" aria-controls="faq-3">           Özel araç ve otobüs maliyet hesaplaması neye göre yapılır? <span class="q-mark">+</span>         </button>         <div class="faq-a" id="faq-3">           <p>Özel araç için aracınızın yakıt tüketimi (litre/100 km), mesafe ve güncel yakıt fiyatı baz alınarak tahmini maliyet hesaplanır. Toplu taşıma için ise durak sefer ücretleri kullanılır. Tüm sonuçlar tahmindir ve gerçek tarifeye göre değişebilir.</p>         </div>       </div>       <div class="faq-item">         <button class="faq-q" aria-expanded="false" aria-controls="faq-4">           Masaüstü uygulaması güvenli mi? <span class="q-mark">+</span>         </button>         <div class="faq-a" id="faq-4">           <p>Evet. Masaüstü sürümü (Windows) bağımsız bir yürütülebilir dosya olarak dağıtılır. Kullanıcı konumu, favori rotalar ve sohbet geçmişi varsayılan olarak yalnızca cihazınızda saklanır; hesapla giriş yaptıysanız eşleştirme şifreli olarak sunucuda tutulur.</p>         </div>       </div>       <div class="faq-item">         <button class="faq-q" aria-expanded="false" aria-controls="faq-5">           Google Play'de mi var? <span class="q-mark">+</span>         </button>         <div class="faq-a" id="faq-5">           <p>Android sürümü hazırlanma aşamasındadır ve çok yakında Google Play Store'da yayımlanacak olacaktır. O süre için masaüstü uygulamasını indirerek kullanmaya başlayabilirsiniz.</p>         </div>       </div>       <div class="faq-item">         <button class="faq-q" aria-expanded="false" aria-controls="faq-6">           Üyelik gerekli mi? Hangi özellikler ücretsiz? <span class="q-mark">+</span>         </button>         <div class="faq-a" id="faq-6">           <p>Hayır, üyelik zorunlu değildir. Temel rota planlama, yakın duraklar ve sefer bilgileri ücretsizdir. AI asistanı, sefer hatırlatıcısı ve XP Mağazası gibi gelişmiş özellikler giriş yaparak kullanılabilir.</p>         </div>       </div>       <div class="faq-item">         <button class="faq-q" aria-expanded="false" aria-controls="faq-7">           Verilerim üçüncü kişilerle paylaşılır mı? <span class="q-mark">+</span>         </button>         <div class="faq-a" id="faq-7">           <p>Hayır, verileriniz satılmaz. Yalnızca kimlik doğrulama için Google ve reklam için AdMob ile sınırlı paylaşım gerçekleştirilir. Ayrıntılı bilgi için Gizlilik Politikası sayfamızı ziyaret edebilirsiniz.</p>         </div>       </div>       <div class="faq-item">         <button class="faq-q" aria-expanded="false" aria-controls="faq-8">           Hatalı bir sefer saati bildirmek için ne yapmalıyım? <span class="q-mark">+</span>         </button>         <div class="faq-a" id="faq-8">           <p>Uygulama içi geri bildirim formu ya da İletişim sayfası üzerinden bize ulaşabilirsiniz. Bildirdiğiniz hatalar incelenerek veri kaynakları güncellenir.</p>         </div>       </div>     </div>   </div> </section>  <!-- ============ SEHIR REHBERI ============ --> <!-- ============ TESTIMONIALS ============ -->
 <section>
   <div class="wrap center">
     <div class="section-head">
@@ -227,24 +207,17 @@
   });
 })();
 (function(){
-  var input = document.getElementById('faqSearch');
-  var items = document.querySelectorAll('.faq-item');
-  var noRes = document.getElementById('faqNoResults');
-  if(!input) return;
-  input.addEventListener('input', function(){
-    var q = input.value.toLocaleLowerCase('tr-TR').trim();
-    var found = 0;
-    items.forEach(function(it){
-      var qbtn = it.querySelector('.faq-q');
-      var ans = it.querySelector('.faq-a');
-      var text = ((qbtn ? qbtn.textContent : '') + ' ' + (ans ? ans.textContent : '')).toLocaleLowerCase('tr-TR');
-      var match = (q === '') || text.indexOf(q) >= 0;
-      if(match){ it.classList.remove('filtered'); found++; } else { it.classList.add('filtered'); }
+  (function(){
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.faq-item');
+      var open = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+      var mark = btn.querySelector('.q-mark');
+      if(mark) mark.textContent = open ? '−' : '+';
     });
-    if(q !== '' && found === 0){ noRes.style.display = 'block'; } else { noRes.style.display = 'none'; }
   });
-})();
-(function(){
+})();(function(){
   var btns = document.querySelectorAll('.tab-btn');
   var panels = document.querySelectorAll('.tab-panel');
   btns.forEach(function(b){
